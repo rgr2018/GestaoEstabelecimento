@@ -1,0 +1,18 @@
+package br.com.fiap.gestaoestabelecimento.dtos;
+
+import lombok.Getter;
+import lombok.Setter;
+
+@Getter
+@Setter
+public class AtualizaDetalhesClienteDTO {
+    private String nome;
+    private String logradouro;
+    private String numero;
+    private String cidade;
+    private String estado;
+    private String cep;
+    private String complemento;
+    private String dataAniversario;
+    private String classificacao;
+}
