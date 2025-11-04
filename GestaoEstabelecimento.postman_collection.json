@@ -1,0 +1,389 @@
+{
+	"info": {
+		"_postman_id": "f50f8ad7-38ee-4416-8c12-7356e789a797",
+		"name": "GestaoEstabelecimento",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48925351",
+		"_collection_link": "https://rgr20-2008-7276280.postman.co/workspace/Rafael's-Workspace~4d5f754a-617f-40fa-8e4a-9b0a9f52cd99/collection/48925351-f50f8ad7-38ee-4416-8c12-7356e789a797?action=share&source=collection_link&creator=48925351"
+	},
+	"item": [
+		{
+			"name": "Cliente",
+			"item": [
+				{
+					"name": "GET bucar-por-name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/usuarios/v1/nome?nome=Rafael",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"usuarios",
+								"v1",
+								"nome"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Rafael"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET valida-acesso",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"deu certo\",\r\n    \"senha\": \"amesma\",\r\n    \"email\": \"Vou incluir1312345091\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/valida-acesso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"valida-acesso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT atualizar-login-senha",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"teste\",\r\n    \"senha\": \"senhacerta\",\r\n    \"email\": \"rafael@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/atualizar-login-senha/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"atualizar-login-senha",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT atualizar-detalhes",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"teste\",\r\n    \"logradouro\": \"Rua 1234\",\r\n    \"numero\" : \"987\",\r\n    \"cidade\": \"teste city\",\r\n    \"estado\": \"teste\",\r\n    \"cep\": \"1234\",\r\n    \"complemento\":\"apt teste\",\r\n    \"dataAniversario\":\"02-14-1982\",\r\n    \"classificacao\":\"Prata\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/atualizar-detalhes?email=rafael@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"atualizar-detalhes"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "rafael@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Teste incluir\",\r\n    \"email\": \"Vou incluir1\",\r\n    \"login\": \"deu certo\",\r\n    \"senha\": \"amesma\",\r\n    \"tipoCliente\" : \"001\",\r\n    \"logradouro\": \"Rua 1234\",\r\n    \"numero\" : \"987\",\r\n    \"cidade\": \"teste city\",\r\n    \"estado\": \"teste\",\r\n    \"cep\": \"1234\",\r\n    \"complemento\":\"apt teste\",\r\n    \"dataAniversario\":\"02-14-1982\",\r\n    \"classificacao\":\"Prata\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE excluir",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Estabelecimento",
+			"item": [
+				{
+					"name": "GET bucar-por-name",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/usuarios/v1/nome?nome=Rafael",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"usuarios",
+								"v1",
+								"nome"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Rafael"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET valida-acesso",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"deu certo\",\r\n    \"senha\": \"amesma\",\r\n    \"email\": \"Vou incluir1312345091\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/donos/v1/validar-acesso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"donos",
+								"v1",
+								"validar-acesso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT atualizar-login-senha",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"teste\",\r\n    \"senha\": \"senhacerta\",\r\n    \"email\": \"rafael@gmail.com\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/atualizar-login-senha/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"atualizar-login-senha",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT atualizar-detalhes",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"teste\",\r\n    \"logradouro\": \"Rua 1234\",\r\n    \"numero\" : \"987\",\r\n    \"cidade\": \"teste city\",\r\n    \"estado\": \"teste\",\r\n    \"cep\": \"1234\",\r\n    \"complemento\":\"apt teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/atualizar-detalhes?email=rafael@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"atualizar-detalhes"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "rafael@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"Teste incluir\",\r\n    \"email\": \"Vou incluir\",\r\n    \"login\": \"deu certo\",\r\n    \"senha\": \"amesma\",\r\n    \"tipoCliente\" : \"001\",\r\n    \"logradouro\": \"Rua 1234\",\r\n    \"numero\" : \"987\",\r\n    \"cidade\": \"teste city\",\r\n    \"estado\": \"teste\",\r\n    \"cep\": \"1234\",\r\n    \"complemento\":\"apt teste\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE excluir",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "New Request",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
