@@ -50,6 +50,45 @@
 					"response": []
 				},
 				{
+					"name": "GET bucar-por-email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/usuarios/v1/buscar-por-email?email=teste.silva@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"usuarios",
+								"v1",
+								"buscar-por-email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "teste.silva@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
 					"name": "GET valida-acesso",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
@@ -92,7 +131,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"login\": \"teste\",\r\n    \"senha\": \"senhacerta\",\r\n    \"email\": \"rafael@gmail.com\"\r\n\r\n}",
+							"raw": "{\r\n    \"email\": \"rafael@gmail.com\",\r\n    \"login\": \"teste\",\r\n    \"senha\": \"senhacerta\"\r\n  \r\n\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -117,13 +156,13 @@
 					"response": []
 				},
 				{
-					"name": "PUT atualizar-detalhes",
+					"name": "PUT atualizar",
 					"request": {
 						"method": "PUT",
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"teste\",\r\n    \"logradouro\": \"Rua 1234\",\r\n    \"numero\" : \"987\",\r\n    \"cidade\": \"teste city\",\r\n    \"estado\": \"teste\",\r\n    \"cep\": \"1234\",\r\n    \"complemento\":\"apt teste\",\r\n    \"dataAniversario\":\"02-14-1982\",\r\n    \"classificacao\":\"Prata\"\r\n}",
+							"raw": "{\r\n  \"idCliente\": \"da9eda71-987c-4fe6-93c6-128a21eed657\",\r\n  \"dataAniversario\": \"1997-02-18\",\r\n  \"usuarioDTO\": {\r\n    \"idUsuario\": \"e55294d6-4e1e-4114-b311-4421e87aab0\",\r\n    \"nome\": \"Juarez Alves\",\r\n    \"email\": \"juarez.alves@example.com\",\r\n    \"login\": \"juarez.a\",\r\n    \"senha\": \"outra\",\r\n    \"tipoUsuario\": \"CLIENTE\",\r\n    \"endereco\": {\r\n        \"idEndereco\": \"7c6ddf5c-42f2-4502-8027-dd42ca2cf261\",\r\n        \"logradouro\": \"10010-000\",\r\n        \"numero\": \"200\",\r\n        \"bairro\": \"Tatuape\",\r\n        \"cidade\": \"Sao Paulo\",\r\n        \"estado\": \"SP\",\r\n        \"cep\": \"00102340\",\r\n        \"complemento\": \"SP\"\r\n    }\r\n  }\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -131,7 +170,7 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/clientes/v1/atualizar-detalhes?email=rafael@gmail.com",
+							"raw": "http://localhost:8081/clientes/v1/atualizar",
 							"protocol": "http",
 							"host": [
 								"localhost"
@@ -140,13 +179,7 @@
 							"path": [
 								"clientes",
 								"v1",
-								"atualizar-detalhes"
-							],
-							"query": [
-								{
-									"key": "email",
-									"value": "rafael@gmail.com"
-								}
+								"atualizar"
 							]
 						}
 					},
@@ -159,7 +192,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"nome\": \"Teste incluir\",\r\n    \"email\": \"Vou incluir1\",\r\n    \"login\": \"deu certo\",\r\n    \"senha\": \"amesma\",\r\n    \"tipoCliente\" : \"001\",\r\n    \"logradouro\": \"Rua 1234\",\r\n    \"numero\" : \"987\",\r\n    \"cidade\": \"teste city\",\r\n    \"estado\": \"teste\",\r\n    \"cep\": \"1234\",\r\n    \"complemento\":\"apt teste\",\r\n    \"dataAniversario\":\"02-14-1982\",\r\n    \"classificacao\":\"Prata\"\r\n}   ",
+							"raw": "{\r\n    \"dataAniversario\":\"02-14-1982\",\r\n    \"nome\": \"Teste incluir\",\r\n    \"email\": \"Vou incluir1\",\r\n    \"login\": \"deu certo\",\r\n    \"senha\": \"amesma\",\r\n    \"cepid\": \"retirar\",\r\n    \"tipoUsuario\":\"001\",\r\n    \"cep\": \"1234\",\r\n    \"logradouro\": \"Rua 1234\",\r\n    \"numero\" : \"987\",\r\n    \"complemento\":\"apt teste\",\r\n    \"bairro\": \"teste\",\r\n    \"cidade\": \"teste city\",\r\n    \"estado\": \"teste\"\r\n}\r\n\r\n\r\n    \"classificacao\":\"Prata\"\r\n}   ",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -184,6 +217,41 @@
 				},
 				{
 					"name": "DELETE excluir",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/excluir?email=b5c7aff6-c12f-4602-83d0-d7ffff25044d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"excluir"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "b5c7aff6-c12f-4602-83d0-d7ffff25044d"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET lista",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET busca-por-id",
 					"request": {
 						"method": "GET",
 						"header": []
@@ -213,14 +281,14 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/usuarios/v1/nome?nome=Rafael",
+							"raw": "http://localhost:8081/estabelecimentos/v1/nome?nome=Rafael",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8081",
 							"path": [
-								"usuarios",
+								"estabelecimentos",
 								"v1",
 								"nome"
 							],
@@ -235,37 +303,7 @@
 					"response": []
 				},
 				{
-					"name": "GET valida-acesso",
-					"request": {
-						"method": "POST",
-						"header": [],
-						"body": {
-							"mode": "raw",
-							"raw": "{\r\n    \"login\": \"deu certo\",\r\n    \"senha\": \"amesma\",\r\n    \"email\": \"Vou incluir1312345091\"\r\n}   ",
-							"options": {
-								"raw": {
-									"language": "json"
-								}
-							}
-						},
-						"url": {
-							"raw": "http://localhost:8081/donos/v1/validar-acesso",
-							"protocol": "http",
-							"host": [
-								"localhost"
-							],
-							"port": "8081",
-							"path": [
-								"donos",
-								"v1",
-								"validar-acesso"
-							]
-						}
-					},
-					"response": []
-				},
-				{
-					"name": "PUT atualizar-login-senha",
+					"name": "GET bucar-por-id",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -274,7 +312,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"login\": \"teste\",\r\n    \"senha\": \"senhacerta\",\r\n    \"email\": \"rafael@gmail.com\"\r\n\r\n}",
+							"raw": "",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -282,24 +320,37 @@
 							}
 						},
 						"url": {
-							"raw": "http://localhost:8081/clientes/v1/atualizar-login-senha/",
+							"raw": "http://localhost:8081/estabelecimentos/v1/nome?nome=Rafael",
 							"protocol": "http",
 							"host": [
 								"localhost"
 							],
 							"port": "8081",
 							"path": [
-								"clientes",
+								"estabelecimentos",
 								"v1",
-								"atualizar-login-senha",
-								""
+								"nome"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Rafael"
+								}
 							]
 						}
 					},
 					"response": []
 				},
 				{
-					"name": "PUT atualizar-detalhes",
+					"name": "GET lista",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "PUT atualizar",
 					"protocolProfileBehavior": {
 						"disableBodyPruning": true
 					},
@@ -378,12 +429,364 @@
 			]
 		},
 		{
-			"name": "New Request",
-			"request": {
-				"method": "GET",
-				"header": []
-			},
-			"response": []
+			"name": "Dono",
+			"item": [
+				{
+					"name": "GET bucar-por-email",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/usuarios/v1/buscar-por-email?email=teste.silva@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"usuarios",
+								"v1",
+								"buscar-por-email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "teste.silva@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET bucar-por-nome",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/usuarios/v1/buscar-por-email?email=teste.silva@example.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"usuarios",
+								"v1",
+								"buscar-por-email"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "teste.silva@example.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT atualizar-login-senha",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"rafael@gmail.com\",\r\n    \"login\": \"teste\",\r\n    \"senha\": \"senhacerta\"\r\n  \r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/atualizar-login-senha/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"atualizar-login-senha",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET valida-acesso",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"login\": \"deu certo\",\r\n    \"senha\": \"amesma\",\r\n    \"email\": \"Vou incluir1312345091\"\r\n}   ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/donos/v1/validar-acesso",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"donos",
+								"v1",
+								"validar-acesso"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"usuarioDTO\": {\r\n    \"nome\": \"dono3\",\r\n    \"email\": \"dono3@email.com\",\r\n    \"login\": \"dono3\",\r\n    \"senha\": \"dono3123\",\r\n    \"tipoUsuario\": \"DONO\",\r\n    \"endereco\": {\r\n      \"cep\": \"01001-000\",\r\n      \"logradouro\": \"Rua das Flores\",\r\n      \"numero\": \"123\",\r\n      \"complemento\": \"Apto 45\",\r\n      \"bairro\": \"Centro\",\r\n      \"cidade\": \"São Paulo\",\r\n      \"estado\": \"SP\"\r\n    },\r\n    \"idEstabelecimento\" : \"392ac04d-73d6-4093-8cbb-68463d16bf43\"\r\n  }\r\n} ",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/donos/v1/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"donos",
+								"v1",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE excluir",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET Lista",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "GET busca-por-id",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8081/donos/v1/buscar-por-id?Iddono=6a3133e3-b6da-4a7f-9609-8041ec38991c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"donos",
+								"v1",
+								"buscar-por-id"
+							],
+							"query": [
+								{
+									"key": "Iddono",
+									"value": "6a3133e3-b6da-4a7f-9609-8041ec38991c"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT atualizar",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Cardapio",
+			"item": [
+				{
+					"name": "GET bucar-por-id",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/estabelecimentos/v1/nome?nome=Rafael",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"estabelecimentos",
+								"v1",
+								"nome"
+							],
+							"query": [
+								{
+									"key": "nome",
+									"value": "Rafael"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT atualizar",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nome\": \"teste\",\r\n    \"logradouro\": \"Rua 1234\",\r\n    \"numero\" : \"987\",\r\n    \"cidade\": \"teste city\",\r\n    \"estado\": \"teste\",\r\n    \"cep\": \"1234\",\r\n    \"complemento\":\"apt teste\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/clientes/v1/atualizar-detalhes?email=rafael@gmail.com",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"clientes",
+								"v1",
+								"atualizar-detalhes"
+							],
+							"query": [
+								{
+									"key": "email",
+									"value": "rafael@gmail.com"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET lista",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				},
+				{
+					"name": "POST incluir",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"nome\": \"Feijoada Completa\",\r\n  \"descricao\": \"Feijoada tradicional com arroz, couve refogada e farofa\",\r\n  \"preco\": \"39.90\",\r\n  \"indicadorDisponibilidade\": \"S\",\r\n  \"fotoPrato\": \"https://meusite.com/imagens/feijoada.jpg\",\r\n  \"idEstabelecimento\": \"a688f981-1584-49bb-910b-c1e06c448492\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8081/cardapios/v1/incluir",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8081",
+							"path": [
+								"cardapios",
+								"v1",
+								"incluir"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE excluir",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
 		}
 	]
 }
