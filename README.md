@@ -30,6 +30,8 @@ Execução: Docker Compose
 
 **-** **Tratamento de Erros**
 
+**-** **Repositorio**
+
 
 # 🧩 ***Descrição Geral***
 Este projeto consiste no desenvolvimento de uma **API REST para Gestão de Estabelecimentos**, elaborada como **atividade acadêmica do curso Pós-Tech**. O objetivo é demonstrar a aplicação prática de conceitos avançados de **arquitetura de software**, **boas práticas de backend**, **testes automatizados** e **tratamento centralizado de exceções**.
@@ -52,12 +54,10 @@ br.com.fiap.gestaoestabelecimento
 │   ├── controllers    # Camada de entrada (HTTP)
 │   └── gateways       # Camada de regras que conversa com os repositorios
 │
-├── application   
-│   └──useCases        # Camada de de orquestração de negócio
-│
 ├── config             # Configuração de Open API para documentação e exposição dos contratos
 │  
 ├── domain             # Dominio e interfaces das classes de negócio
+│   └──useCases        # Camada de de orquestração de negócio
 │
 ├── dtos               # Objetos de transferência de dados
 │
@@ -67,6 +67,8 @@ br.com.fiap.gestaoestabelecimento
 │   ├── entities       # Entitdades e atributos de banco de dados 
 │   ├── mappers        # conversão de entidades e atributos em classes e objetos de negócio
 │   └── repositories   # Interfaces de persistência
+│
+├── interfaces
 │
 └── GestaoEstabelecimentoApplication.java
 ```
@@ -803,5 +805,6 @@ Incluir Cliente/Dono	Email deve ser único
 Excluir Cliente/Dono	Requer cadastro existente
 ```
 
-
+# ⚙️ ***Repositorio***
+https://github.com/rgr2018/GestaoEstabelecimento/tree/gestaoEstabelecimentoFase2
 
