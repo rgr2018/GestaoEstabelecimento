@@ -775,7 +775,7 @@ Descrição: Remove um item de cardápio.
 
 A documentação interativa dos endpoints estará disponível após subir o container em:
 
-http://localhost:8082/swagger-ui/index.html
+http://localhost:8081/swagger-ui/index.html#
 
 
 # ⚙️ ***Tratamento de Erros***
