@@ -1,6 +1,6 @@
 package br.com.fiap.gestaoestabelecimento.usecases;
 import br.com.fiap.gestaoestabelecimento.adapters.gateways.EstabelecimentoGatewayImp;
-import br.com.fiap.gestaoestabelecimento.application.EstabelecimentoUseCase;
+import br.com.fiap.gestaoestabelecimento.domain.EstabelecimentoUseCase;
 import br.com.fiap.gestaoestabelecimento.domain.Estabelecimento;
 import br.com.fiap.gestaoestabelecimento.dtos.AtualizaEstabelecimentoDTO;
 import br.com.fiap.gestaoestabelecimento.dtos.IncluiEstabelecimentoDTO;

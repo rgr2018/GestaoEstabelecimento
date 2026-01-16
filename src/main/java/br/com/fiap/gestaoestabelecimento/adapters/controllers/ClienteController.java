@@ -1,10 +1,7 @@
 package br.com.fiap.gestaoestabelecimento.adapters.controllers;
 
 import br.com.fiap.gestaoestabelecimento.domain.Cliente;
-import br.com.fiap.gestaoestabelecimento.domain.Usuario;
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.ClienteEntity;
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.UsuarioEntity;
-import br.com.fiap.gestaoestabelecimento.application.ClienteUseCase;
+import br.com.fiap.gestaoestabelecimento.domain.ClienteUseCase;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
 
 import org.springframework.http.ResponseEntity;

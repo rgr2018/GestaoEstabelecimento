@@ -1,11 +1,10 @@
 package br.com.fiap.gestaoestabelecimento.adapters.gateways;
-import br.com.fiap.gestaoestabelecimento.domain.UsuarioGateway;
+import br.com.fiap.gestaoestabelecimento.interfaces.UsuarioGateway;
 import br.com.fiap.gestaoestabelecimento.dtos.AtualizaLoginSenhaUsuarioDTO;
 import br.com.fiap.gestaoestabelecimento.exceptions.BusinessException;
 import br.com.fiap.gestaoestabelecimento.infrastructure.repositories.UsuarioRepository;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
-import java.util.List;
 
 @Service
 public class UsuarioGatewayImp implements UsuarioGateway {

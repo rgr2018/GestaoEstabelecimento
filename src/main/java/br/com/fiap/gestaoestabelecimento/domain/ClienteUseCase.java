@@ -1,8 +1,8 @@
-package br.com.fiap.gestaoestabelecimento.application;
-
-import br.com.fiap.gestaoestabelecimento.domain.*;
+package br.com.fiap.gestaoestabelecimento.domain;
 
 import br.com.fiap.gestaoestabelecimento.dtos.*;
+import br.com.fiap.gestaoestabelecimento.interfaces.ClienteGateway;
+import br.com.fiap.gestaoestabelecimento.interfaces.UsuarioGateway;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 

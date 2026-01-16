@@ -1,8 +1,10 @@
 package br.com.fiap.gestaoestabelecimento.usecases;
 
-import br.com.fiap.gestaoestabelecimento.application.DonoUseCase;
+import br.com.fiap.gestaoestabelecimento.domain.DonoUseCase;
 import br.com.fiap.gestaoestabelecimento.domain.*;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
+import br.com.fiap.gestaoestabelecimento.interfaces.DonoGateway;
+import br.com.fiap.gestaoestabelecimento.interfaces.UsuarioGateway;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;

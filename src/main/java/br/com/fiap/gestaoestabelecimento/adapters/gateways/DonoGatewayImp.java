@@ -1,6 +1,6 @@
 package br.com.fiap.gestaoestabelecimento.adapters.gateways;
 import br.com.fiap.gestaoestabelecimento.domain.Dono;
-import br.com.fiap.gestaoestabelecimento.domain.DonoGateway;
+import br.com.fiap.gestaoestabelecimento.interfaces.DonoGateway;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
 import br.com.fiap.gestaoestabelecimento.exceptions.BusinessException;
 import br.com.fiap.gestaoestabelecimento.exceptions.ValidationException;

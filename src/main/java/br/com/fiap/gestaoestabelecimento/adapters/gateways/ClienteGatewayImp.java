@@ -1,7 +1,7 @@
 package br.com.fiap.gestaoestabelecimento.adapters.gateways;
 
 import br.com.fiap.gestaoestabelecimento.domain.Cliente;
-import br.com.fiap.gestaoestabelecimento.domain.ClienteGateway;
+import br.com.fiap.gestaoestabelecimento.interfaces.ClienteGateway;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
 import br.com.fiap.gestaoestabelecimento.exceptions.BusinessException;
 import br.com.fiap.gestaoestabelecimento.exceptions.ValidationException;

@@ -86,10 +86,6 @@ public class Usuario {
         return dataUltimaAlteracao;
     }
 
-    public void setDataUltimaAlteracao(String dataUltimaAlteracao) {
-        this.dataUltimaAlteracao = dataUltimaAlteracao;
-    }
-
     public Endereco getEndereco() {
         return endereco;
     }

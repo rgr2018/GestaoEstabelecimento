@@ -54,16 +54,9 @@ public class Estabelecimento {
     public UUID getIdEstabelecimento() { return idEstabelecimento; }
     public String getNome() { return nome; }
     public String getCnpj() { return cnpj; }
-    public String getTipoCozinha() { return tipoCozinha; }
-    public String getTipoEstabelecimento() { return tipoEstabelecimento; }
-    public String getHorarioAberturaDiaSemana() { return horarioAberturaDiaSemana; }
-    public String getHorarioFechamentoDiaSemana() { return horarioFechamentoDiaSemana; }
-    public String getHorarioAberturaFeriadoFimSemana() { return horarioAberturaFeriadoFimSemana; }
-    public String getHorarioFechamentoFeriadoFimSemana() { return horarioFechamentoFeriadoFimSemana; }
     public Endereco getEndereco() {return endereco; }
     public List<Dono> getDonos() {return donos;}
-    public void setDonos(List<Dono> donos) { this.donos = donos;}
     public List<Cardapio> getCardapios() { return cardapios; }
-    public void setCardapios(List<Cardapio> cardapios) {this.cardapios = cardapios;}
+
 
 }

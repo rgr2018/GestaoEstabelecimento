@@ -6,10 +6,10 @@ public class Cardapio {
 
         private UUID id;
         private String nome;
-        private String descricao;
-        private Double preco;
-        private String indicadorDisponibilidade;
-        private String fotoPrato;
+        private final String descricao;
+        private final Double preco;
+        private final String indicadorDisponibilidade;
+        private final String fotoPrato;
 
 
         public Cardapio(
@@ -29,8 +29,5 @@ public class Cardapio {
         public UUID getId() { return id; }
         public void setId(UUID id) { this.id = id; }
         public String getNome() { return nome; }
-        public String getDescricao() { return descricao; }
-        public Double getPreco() { return preco; }
-        public String getIndicadorDisponibilidade() { return indicadorDisponibilidade; }
-        public String getFotoPrato() { return fotoPrato; }
+
 }

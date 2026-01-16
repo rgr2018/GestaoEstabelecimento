@@ -1,6 +1,6 @@
-package br.com.fiap.gestaoestabelecimento.domain;
+package br.com.fiap.gestaoestabelecimento.interfaces;
 
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.DonoEntity;
+import br.com.fiap.gestaoestabelecimento.domain.Dono;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
 
 import java.util.List;

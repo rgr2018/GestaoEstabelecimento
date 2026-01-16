@@ -1,10 +1,7 @@
 package br.com.fiap.gestaoestabelecimento.adapters.controllers;
 
 import br.com.fiap.gestaoestabelecimento.domain.Dono;
-import br.com.fiap.gestaoestabelecimento.domain.Usuario;
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.DonoEntity;
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.UsuarioEntity;
-import br.com.fiap.gestaoestabelecimento.application.DonoUseCase;
+import br.com.fiap.gestaoestabelecimento.domain.DonoUseCase;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;

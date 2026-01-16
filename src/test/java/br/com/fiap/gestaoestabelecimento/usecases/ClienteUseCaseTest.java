@@ -1,7 +1,9 @@
 package br.com.fiap.gestaoestabelecimento.usecases;
-import br.com.fiap.gestaoestabelecimento.application.ClienteUseCase;
+import br.com.fiap.gestaoestabelecimento.domain.ClienteUseCase;
 import br.com.fiap.gestaoestabelecimento.domain.*;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
+import br.com.fiap.gestaoestabelecimento.interfaces.ClienteGateway;
+import br.com.fiap.gestaoestabelecimento.interfaces.UsuarioGateway;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.mockito.ArgumentCaptor;

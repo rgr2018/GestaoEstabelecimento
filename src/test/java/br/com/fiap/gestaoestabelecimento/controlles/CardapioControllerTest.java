@@ -1,7 +1,7 @@
 package br.com.fiap.gestaoestabelecimento.controlles;
 
 import br.com.fiap.gestaoestabelecimento.adapters.controllers.CardapioController;
-import br.com.fiap.gestaoestabelecimento.application.CardapioUseCase;
+import br.com.fiap.gestaoestabelecimento.domain.CardapioUseCase;
 import br.com.fiap.gestaoestabelecimento.domain.Cardapio;
 import br.com.fiap.gestaoestabelecimento.dtos.AtualizaCardapioDTO;
 import br.com.fiap.gestaoestabelecimento.dtos.IncluiCardapioDTO;

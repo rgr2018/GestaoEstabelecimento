@@ -1,7 +1,7 @@
-package br.com.fiap.gestaoestabelecimento.domain;
+package br.com.fiap.gestaoestabelecimento.interfaces;
 
+import br.com.fiap.gestaoestabelecimento.domain.Cliente;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.ClienteEntity;
 
 import java.util.List;
 import java.util.UUID;

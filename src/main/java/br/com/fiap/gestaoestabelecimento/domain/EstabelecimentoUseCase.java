@@ -1,8 +1,6 @@
-package br.com.fiap.gestaoestabelecimento.application;
+package br.com.fiap.gestaoestabelecimento.domain;
 
 import br.com.fiap.gestaoestabelecimento.adapters.gateways.EstabelecimentoGatewayImp;
-import br.com.fiap.gestaoestabelecimento.domain.Estabelecimento;
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.EstabelecimentoEntity;
 import br.com.fiap.gestaoestabelecimento.dtos.AtualizaEstabelecimentoDTO;
 import br.com.fiap.gestaoestabelecimento.dtos.IncluiEstabelecimentoDTO;
 import org.springframework.stereotype.Component;

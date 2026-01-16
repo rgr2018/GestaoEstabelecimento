@@ -1,6 +1,6 @@
 package br.com.fiap.gestaoestabelecimento.adapters.gateways;
 import br.com.fiap.gestaoestabelecimento.domain.Estabelecimento;
-import br.com.fiap.gestaoestabelecimento.domain.EstabelecimentoGateway;
+import br.com.fiap.gestaoestabelecimento.interfaces.EstabelecimentoGateway;
 import br.com.fiap.gestaoestabelecimento.dtos.AtualizaEstabelecimentoDTO;
 import br.com.fiap.gestaoestabelecimento.dtos.IncluiEstabelecimentoDTO;
 import br.com.fiap.gestaoestabelecimento.exceptions.BusinessException;

@@ -1,6 +1,6 @@
-package br.com.fiap.gestaoestabelecimento.domain;
+package br.com.fiap.gestaoestabelecimento.interfaces;
 
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.EstabelecimentoEntity;
+import br.com.fiap.gestaoestabelecimento.domain.Estabelecimento;
 import br.com.fiap.gestaoestabelecimento.dtos.AtualizaEstabelecimentoDTO;
 import br.com.fiap.gestaoestabelecimento.dtos.IncluiEstabelecimentoDTO;
 

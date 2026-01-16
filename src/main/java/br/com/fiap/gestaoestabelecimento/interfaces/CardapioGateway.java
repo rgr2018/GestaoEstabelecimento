@@ -1,5 +1,6 @@
-package br.com.fiap.gestaoestabelecimento.domain;
+package br.com.fiap.gestaoestabelecimento.interfaces;
 
+import br.com.fiap.gestaoestabelecimento.domain.Cardapio;
 import br.com.fiap.gestaoestabelecimento.dtos.AtualizaCardapioDTO;
 import br.com.fiap.gestaoestabelecimento.dtos.IncluiCardapioDTO;
 

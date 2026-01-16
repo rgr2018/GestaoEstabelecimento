@@ -1,6 +1,6 @@
 package br.com.fiap.gestaoestabelecimento.controlles;
 import br.com.fiap.gestaoestabelecimento.adapters.controllers.ClienteController;
-import br.com.fiap.gestaoestabelecimento.application.ClienteUseCase;
+import br.com.fiap.gestaoestabelecimento.domain.ClienteUseCase;
 import br.com.fiap.gestaoestabelecimento.domain.Cliente;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
 import com.fasterxml.jackson.databind.ObjectMapper;

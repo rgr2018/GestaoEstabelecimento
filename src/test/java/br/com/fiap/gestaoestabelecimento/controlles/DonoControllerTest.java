@@ -1,6 +1,6 @@
 package br.com.fiap.gestaoestabelecimento.controlles;
 import br.com.fiap.gestaoestabelecimento.adapters.controllers.DonoController;
-import br.com.fiap.gestaoestabelecimento.application.DonoUseCase;
+import br.com.fiap.gestaoestabelecimento.domain.DonoUseCase;
 import br.com.fiap.gestaoestabelecimento.domain.Dono;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
 import com.fasterxml.jackson.databind.ObjectMapper;

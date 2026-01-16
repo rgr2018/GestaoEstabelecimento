@@ -1,9 +1,8 @@
-package br.com.fiap.gestaoestabelecimento.application;
+package br.com.fiap.gestaoestabelecimento.domain;
 
-import br.com.fiap.gestaoestabelecimento.domain.*;
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.DonoEntity;
-import br.com.fiap.gestaoestabelecimento.infrastructure.entities.UsuarioEntity;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
+import br.com.fiap.gestaoestabelecimento.interfaces.DonoGateway;
+import br.com.fiap.gestaoestabelecimento.interfaces.UsuarioGateway;
 import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Component;
 

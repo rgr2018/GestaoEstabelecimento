@@ -1,7 +1,7 @@
 package br.com.fiap.gestaoestabelecimento.adapters.gateways;
 
 import br.com.fiap.gestaoestabelecimento.domain.Cardapio;
-import br.com.fiap.gestaoestabelecimento.domain.CardapioGateway;
+import br.com.fiap.gestaoestabelecimento.interfaces.CardapioGateway;
 import br.com.fiap.gestaoestabelecimento.infrastructure.entities.EstabelecimentoEntity;
 import br.com.fiap.gestaoestabelecimento.dtos.AtualizaCardapioDTO;
 import br.com.fiap.gestaoestabelecimento.dtos.IncluiCardapioDTO;

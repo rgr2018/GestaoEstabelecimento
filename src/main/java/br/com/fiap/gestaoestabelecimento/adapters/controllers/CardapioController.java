@@ -1,6 +1,6 @@
 package br.com.fiap.gestaoestabelecimento.adapters.controllers;
 import br.com.fiap.gestaoestabelecimento.domain.Cardapio;
-import br.com.fiap.gestaoestabelecimento.application.CardapioUseCase;
+import br.com.fiap.gestaoestabelecimento.domain.CardapioUseCase;
 import br.com.fiap.gestaoestabelecimento.dtos.*;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
